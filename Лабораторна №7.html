@@ -1,0 +1,43 @@
+<html>
+    <head><title>Лабораторна №7</title>
+        <script language="JavaScript">
+            var h, p;
+            function calc(form)
+            {
+                h=eval(form.hValue.value);
+                p=eval(form.pValue.value);
+                form.mResult.value=eval(p + (h - 7 * Math.sin(p + 2 * h * h)) / (3 * p - 4 * h)).toFixed(2);
+                form.vResult.value=eval(Math.pow(Math.cos((p + 1) - 4 * (h + p)), 2)).toFixed(2);
+            }
+        </script>
+    </head>
+    <body link="#FFFFFF" text="#000000" vlink="#999999" 
+    alink="#00FF00" bgcolor="#000000">
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <center>
+        <form>
+            <table border="3" cellspacing=2 width=350 bgcolor="#ffebcd">
+                <tr align="center"> 
+                    <th align="right">Введіть h:</th>
+                    <td><input type="text" name="hValue" size="15"></td>
+                </tr>
+                <tr align="center"> 
+                    <th align="right">Введіть p:</th>
+                    <td><input type="text" name="pValue" size="15"></td>
+                </tr>
+                <tr align="center">
+                    <th align="right">m=</th>
+                    <td><input type="text" name="mResult" size="15"></td>
+                </tr>
+                <tr align="center">
+                    <th align="right">v=</th>
+                    <td><input type="text" name="vResult" size="15"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input type="button" value="Обчислити m та p" onclick="calc(this.form)"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+    </body>
+</html>

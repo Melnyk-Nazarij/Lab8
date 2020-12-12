@@ -1,0 +1,26 @@
+<html>
+    <body link="#FFFFFF" text="#000000" vlink="#999999" 
+    alink="#00FF00" bgcolor="#000000">
+    <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+    <center>
+        <script language="JavaScript">
+            function calc(form) 
+            {
+                form.result.value=eval(form.expr.value);
+            }
+        </script>
+        <form>
+            <table border=3 cellspacing=2 width=350 bgcolor="#ffebcd">
+                <tr align=center><th align="right">Формула для розрахунку:</th>
+                    <td><input type="text" name="expr" size=15></td>
+                    <td rowspan=2><input type="button" value="Обчислити" onclick="calc(this.form)"></td>
+                </tr>
+                <tr align="center">
+                    <th align="right">Результат:</th>
+                    <td><input type="text" name="result" size=15></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>
